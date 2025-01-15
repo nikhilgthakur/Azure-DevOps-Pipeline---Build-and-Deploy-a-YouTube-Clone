@@ -1,7 +1,7 @@
-# Azure DevOps Build Pipeline - Build and Deploy a YouTube Clone
+# 🚀 Azure DevOps Pipeline - Build and Deploy a YouTube Clone
 
 ## Project Overview
-This project demonstrates how to build and deploy a YouTube Clone application using Azure DevOps pipelines. It covers the process from setting up the infrastructure to deploying the application on Azure App Service.
+This project demonstrates how to build and deploy a YouTube Clone application using Azure DevOps pipelines. It covers the process from setting up the infrastructure to deploy the application on Azure App Service.
 
 ---
 
@@ -19,28 +19,45 @@ This project demonstrates how to build and deploy a YouTube Clone application us
 ### 1. Clone the Application Code
 Open a terminal in your IDE and run the following commands to download the application code:
 
-mkdir day4_youtube_clone
-cd day4_youtube_clone
+---
+
+mkdir youtube_clone
+cd youtube_clone
 git init
 git clone https://github.com/piyushsachdeva/Youtube_Clone
 
+---
+
 ### 2. Push Code to Azure DevOps
 Create a new project in Azure DevOps for this build pipeline and push the code using the following commands:
+
+---
 
 git remote add origin <YOUR_AZURE_REPO_URL>
 git push -u origin all
 
 > **Note:** Replace `<YOUR_AZURE_REPO_URL>` with your Azure repository URL.
 
+---
+
 ### 3. Create Azure App Service
 - Go to [Azure Portal](https://portal.azure.com).
 - Create an Azure App Service 
 
+<img width="916" alt="image" src="https://github.com/user-attachments/assets/1fe831a2-a90f-4289-b694-3894c55574be" />
 
 
 ### 4. Implement the Build Pipeline
-- Use the Azure DevOps classic editor to create the build pipeline.
+- Use the Azure DevOps pipeline the build pipeline.
 - Set up service connections and configure service principals as needed.
+
+<img width="917" alt="image" src="https://github.com/user-attachments/assets/a43ce827-83db-457d-8f00-e128bcda1a6b" />
+
+<img width="913" alt="image" src="https://github.com/user-attachments/assets/2d6d1005-e6f9-4969-b3db-cf6d251c18b7" />
+  
+<img width="950" alt="image" src="https://github.com/user-attachments/assets/134453be-ac1b-4154-9722-f52367a1030b" />
+
+
 
 ### 5. Configure App Settings
 Set the following app settings to disable all file caching:
@@ -48,7 +65,8 @@ Set the following app settings to disable all file caching:
 - **WEBSITE_DYNAMIC_CACHE:** `0`
 - **WEBSITE_LOCAL_CACHE_OPTION:** `Never`
 
----
+<img width="898" alt="image" src="https://github.com/user-attachments/assets/09911c81-82bf-4f83-8c8c-143535bcd9e4" />
+
 
 ## Azure DevOps Pipeline Structure
 
@@ -65,7 +83,7 @@ Set the following app settings to disable all file caching:
 
 ## Pipeline Code
 
-Below is the pipeline YAML used in the demo:
+Below is the pipeline YAML used in the project:
 
 ```yaml
 trigger:
@@ -107,9 +125,9 @@ stages:
     - task: AzureRmWebAppDeployment@4
       inputs:
         ConnectionType: 'AzureRM'
-        azureSubscription: 'Tech Tutorials With Piyush (9e9c27ce-e0c8-4171-a368-ad16977ec849)'
+        azureSubscription: '<<Subscription_name>>'
         appType: 'webAppLinux'
-        WebAppName: 'TechTutorialsWithPiyush'
+        WebAppName: '<<WebApp_name>>'
         packageForLinux: '$(System.ArtifactsDirectory)/drop'
         RuntimeStack: 'STATICSITE|1.0'
 ```
@@ -129,8 +147,5 @@ stages:
 - [Azure DevOps Documentation](https://docs.microsoft.com/en-us/azure/devops)
 - [Azure App Service Documentation](https://docs.microsoft.com/en-us/azure/app-service)
 
----
-
-## License
-This project is licensed under the MIT License. See the LICENSE file for details.
+THANK YOU
 
