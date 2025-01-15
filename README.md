@@ -4,14 +4,12 @@
 This project demonstrates how to build and deploy a YouTube Clone application using Azure DevOps pipelines. It covers the process from setting up the infrastructure to deploy the application on Azure App Service.
 
 ---
-
 ## Prerequisites
 
 - **Azure DevOps Account:** Ensure you have an Azure DevOps organization set up.
 - **Azure Subscription:** Required for deploying the application to Azure App Service.
 - **IDE:** Use Visual Studio Code (VSCode) or any other preferred IDE.
 - **Git:** Ensure Git is installed and configured.
-
 ---
 
 ## Steps to Set Up the Infrastructure
