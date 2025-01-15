@@ -1,0 +1,43 @@
+trigger:
+- main
+
+stages:
+  - stage: Build
+    jobs:
+    - job: Build
+      pool: 
+        vmImage: 'Ubuntu-latest'
+      steps:
+      - task: Npm@1
+        inputs:
+          command: 'install'
+      - task: Npm@1
+        inputs:
+          command: 'custom'
+          customCommand: 'run build'
+      - task: PublishBuildArtifacts@1
+        inputs:
+          PathtoPublish: 'build'
+          ArtifactName: 'drop'
+          publishLocation: 'Container'
+
+  - stage: Deploy
+    jobs:
+    - job: Deploy
+      pool: 
+        vmImage: 'Ubuntu-latest'  
+      steps:
+      - task: DownloadBuildArtifacts@1
+        inputs:
+          buildType: 'current'
+          downloadType: 'single'
+          artifactName: 'drop'
+          downloadPath: '$(System.ArtifactsDirectory)'
+      - task: AzureRmWebAppDeployment@4
+        inputs:
+          ConnectionType: 'AzureRM'
+          azureSubscription: 'Pay-As-You-Go (a859831e-dbb1-4d73-8b50-a82ac0fcc7d5)'
+          appType: 'webAppLinux'
+          WebAppName: 'youtubecloneprojectbynikhil'
+          packageForLinux: '$(System.ArtifactsDirectory)/drop'
+          RuntimeStack: 'STATICSITE|1.0'
