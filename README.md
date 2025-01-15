@@ -1,4 +1,4 @@
-# 🚀 Azure DevOps Pipeline - Build and Deploy a YouTube Clone
+# 🚀 Azure DevOps Pipeline - Build and Deploy a YouTube Clone 
 
 ## Project Overview
 This project demonstrates how to build and deploy a YouTube Clone application using Azure DevOps pipelines. It covers the process from setting up the infrastructure to deploy the application on Azure App Service.
