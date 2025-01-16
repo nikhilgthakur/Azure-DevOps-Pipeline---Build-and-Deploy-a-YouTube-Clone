@@ -120,12 +120,13 @@ Set the following app settings to disable all file caching:
 7. **Artifacts:** Collections of files or packages published by a run.
 
 Application Running on Azure WebApp
+
 ![image](https://github.com/user-attachments/assets/ae72a703-eaa7-4ac1-80e0-511ab08d8433)
 
+---
 
 
-
-
+---
 
 # Deploying the Application Using Separate Build and Release Pipelines with an Additional Stage for Deployment to the Dev Environment
 
@@ -165,6 +166,8 @@ stages:
 
 ### 5. Implement the Release Pipeline
 
+![image](https://github.com/user-attachments/assets/d747e862-863e-4a17-8051-8c004e881ee3)
+
 ![image](https://github.com/user-attachments/assets/4f28743a-27f5-4e8d-9087-67bdcb126272)
 
 ![image](https://github.com/user-attachments/assets/b2f4f643-309f-4aa0-86b0-41bdebe3ac9e)
@@ -183,15 +186,18 @@ stages:
 
 ![image](https://github.com/user-attachments/assets/06d45ca6-3aa9-4e6d-80aa-ed513f8a2df6)
 
-![image](https://github.com/user-attachments/assets/d747e862-863e-4a17-8051-8c004e881ee3)
+
 
 ### 6. Swap the  deployment slots
+
 
 ![image](https://github.com/user-attachments/assets/5f44b30d-8248-407a-9c78-85c5477558c5)
 
 ### 7. Application running successfully
 
+
 ![image](https://github.com/user-attachments/assets/2e4bd098-887f-4fc4-858a-cdd90b66af00)
+
 
 END
 
