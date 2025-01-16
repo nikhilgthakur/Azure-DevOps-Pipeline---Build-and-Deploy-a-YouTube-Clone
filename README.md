@@ -120,17 +120,75 @@ stages:
         RuntimeStack: 'STATICSITE|1.0'
 ```
 
-## Key Learnings
-
-- **Service Connection & Service Principal:** Understanding how to securely connect Azure DevOps pipelines to Azure resources.
-- **Pipeline Stages and Jobs:** Managing build and deployment processes efficiently.
-- **Caching Management:** Properly disabling file caching to ensure reliable application behavior.
+![image](https://github.com/user-attachments/assets/ae72a703-eaa7-4ac1-80e0-511ab08d8433)
 
 
-## Additional Resources
+END
 
-- [Azure DevOps Documentation](https://docs.microsoft.com/en-us/azure/devops)
-- [Azure App Service Documentation](https://docs.microsoft.com/en-us/azure/app-service)
+# Deploying the Application Using Separate Build and Release Pipelines with an Additional Stage for Deployment to the Dev Environment
 
-THANK YOU
+![image](https://github.com/user-attachments/assets/93b157b3-591c-4781-801f-57227da796c9)
+
+Same execution till step 3 from above.
+
+### 4. Implement the Build Pipeline
+
+Code below
+
+```
+trigger:
+- main
+
+stages:
+  - stage: Build
+    jobs:
+    - job: Build
+      pool: 
+        vmImage: 'Ubuntu-latest'
+      steps:
+      - task: Npm@1
+        inputs:
+          command: 'install'
+      - task: Npm@1
+        inputs:
+          command: 'custom'
+          customCommand: 'run build'
+      - task: PublishBuildArtifacts@1
+        inputs:
+          PathtoPublish: 'build'
+          ArtifactName: 'drop'
+          publishLocation: 'Container'
+```
+
+### 5. Implement the Release Pipeline
+
+![image](https://github.com/user-attachments/assets/b2f4f643-309f-4aa0-86b0-41bdebe3ac9e)
+
+![image](https://github.com/user-attachments/assets/7d661cb3-e50d-44e4-9b83-e193eb83661d)
+
+![image](https://github.com/user-attachments/assets/acfeb9b7-6a5b-48c3-932d-5a8edebba24a)
+
+![image](https://github.com/user-attachments/assets/ba00cd97-4688-4aa7-a8c9-c282dc23f73d)
+
+![image](https://github.com/user-attachments/assets/556151c6-90e8-4d79-93b6-57a0401cf435)
+
+![image](https://github.com/user-attachments/assets/41286c04-226a-411c-b6dd-c65dd956b59f)
+
+![image](https://github.com/user-attachments/assets/3248cd9f-579f-4842-8f9e-7a976e91037e)
+
+![image](https://github.com/user-attachments/assets/4f28743a-27f5-4e8d-9087-67bdcb126272)
+
+![image](https://github.com/user-attachments/assets/06d45ca6-3aa9-4e6d-80aa-ed513f8a2df6)
+
+![image](https://github.com/user-attachments/assets/d747e862-863e-4a17-8051-8c004e881ee3)
+
+### 6. Swap the  deployment slots
+
+![image](https://github.com/user-attachments/assets/5f44b30d-8248-407a-9c78-85c5477558c5)
+
+### 7. Application running successfully
+
+![image](https://github.com/user-attachments/assets/2e4bd098-887f-4fc4-858a-cdd90b66af00)
+
+END
 
