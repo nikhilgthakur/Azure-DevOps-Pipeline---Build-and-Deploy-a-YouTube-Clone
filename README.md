@@ -14,23 +14,22 @@ This project demonstrates how to build and deploy a YouTube Clone application us
 
 ### 1. Clone the Application Code
 Open a terminal in your IDE and run the following commands to download the application code:
-
----
-mkdir youtube_clone
-cd youtube_clone
-git init
-git clone https://github.com/piyushsachdeva/Youtube_Clone
----
+  
+  ```
+  mkdir youtube_clone; cd youtube_clone
+  git init
+  git clone https://github.com/piyushsachdeva/Youtube_Clone
+  ```
 
 ### 2. Push Code to Azure DevOps
 Create a new project in Azure DevOps for this build pipeline and push the code using the following commands:
 
----
-git remote add origin <YOUR_AZURE_REPO_URL>
-git push -u origin all
+  ```
+  git remote add origin $YOURAZUREREPO
+  git push -u origin all
+  ```
 
 > **Note:** Replace `<YOUR_AZURE_REPO_URL>` with your Azure repository URL.
----
 
 ### 3. Create Azure App Service
 - Go to [Azure Portal](https://portal.azure.com).
