@@ -41,34 +41,6 @@ Create a new project in Azure DevOps for this build pipeline and push the code u
 - Use the Azure DevOps pipeline the build pipeline.
 - Set up service connections and configure service principals as needed.
 
-<img width="917" alt="image" src="https://github.com/user-attachments/assets/a43ce827-83db-457d-8f00-e128bcda1a6b" />
-
-<img width="913" alt="image" src="https://github.com/user-attachments/assets/2d6d1005-e6f9-4969-b3db-cf6d251c18b7" />
-  
-<img width="950" alt="image" src="https://github.com/user-attachments/assets/134453be-ac1b-4154-9722-f52367a1030b" />
-
-
-### 5. Configure App Settings
-Set the following app settings to disable all file caching:
-
-- **WEBSITE_DYNAMIC_CACHE:** `0`
-- **WEBSITE_LOCAL_CACHE_OPTION:** `Never`
-
-<img width="898" alt="image" src="https://github.com/user-attachments/assets/09911c81-82bf-4f83-8c8c-143535bcd9e4" />
-
-
-## Azure DevOps Pipeline Structure
-
-### Pipeline Components
-1. **Trigger:** Determines when the pipeline runs (CI, scheduled, manual, etc.).
-2. **Stages:** Organize jobs; a pipeline can have multiple stages.
-3. **Jobs:** Each stage contains one or more jobs.
-4. **Agents:** Jobs run on agents (e.g., Ubuntu, Windows, macOS).
-5. **Steps:** The smallest building block, can be tasks or scripts.
-6. **Tasks:** Pre-packaged scripts for specific actions.
-7. **Artifacts:** Collections of files or packages published by a run.
-
-
 ## Pipeline Code
 
 Below is the pipeline YAML used in the project:
@@ -120,16 +92,47 @@ stages:
         RuntimeStack: 'STATICSITE|1.0'
 ```
 
+<img width="917" alt="image" src="https://github.com/user-attachments/assets/a43ce827-83db-457d-8f00-e128bcda1a6b" />
+
+<img width="913" alt="image" src="https://github.com/user-attachments/assets/2d6d1005-e6f9-4969-b3db-cf6d251c18b7" />
+  
+<img width="950" alt="image" src="https://github.com/user-attachments/assets/134453be-ac1b-4154-9722-f52367a1030b" />
+
+
+### 5. Configure App Settings
+Set the following app settings to disable all file caching:
+
+- **WEBSITE_DYNAMIC_CACHE:** `0`
+- **WEBSITE_LOCAL_CACHE_OPTION:** `Never`
+
+<img width="898" alt="image" src="https://github.com/user-attachments/assets/09911c81-82bf-4f83-8c8c-143535bcd9e4" />
+
+
+## Azure DevOps Pipeline Structure
+
+### Pipeline Components
+1. **Trigger:** Determines when the pipeline runs (CI, scheduled, manual, etc.).
+2. **Stages:** Organize jobs; a pipeline can have multiple stages.
+3. **Jobs:** Each stage contains one or more jobs.
+4. **Agents:** Jobs run on agents (e.g., Ubuntu, Windows, macOS).
+5. **Steps:** The smallest building block, can be tasks or scripts.
+6. **Tasks:** Pre-packaged scripts for specific actions.
+7. **Artifacts:** Collections of files or packages published by a run.
+
+Application Running on Azure WebApp
 ![image](https://github.com/user-attachments/assets/ae72a703-eaa7-4ac1-80e0-511ab08d8433)
 
 
-END
+
+
+
 
 # Deploying the Application Using Separate Build and Release Pipelines with an Additional Stage for Deployment to the Dev Environment
 
 ![image](https://github.com/user-attachments/assets/93b157b3-591c-4781-801f-57227da796c9)
 
-Same execution till step 3 from above.
+
+Follow the same process up to Step 3 as outlined above.
 
 ### 4. Implement the Build Pipeline
 
@@ -162,6 +165,8 @@ stages:
 
 ### 5. Implement the Release Pipeline
 
+![image](https://github.com/user-attachments/assets/4f28743a-27f5-4e8d-9087-67bdcb126272)
+
 ![image](https://github.com/user-attachments/assets/b2f4f643-309f-4aa0-86b0-41bdebe3ac9e)
 
 ![image](https://github.com/user-attachments/assets/7d661cb3-e50d-44e4-9b83-e193eb83661d)
@@ -175,8 +180,6 @@ stages:
 ![image](https://github.com/user-attachments/assets/41286c04-226a-411c-b6dd-c65dd956b59f)
 
 ![image](https://github.com/user-attachments/assets/3248cd9f-579f-4842-8f9e-7a976e91037e)
-
-![image](https://github.com/user-attachments/assets/4f28743a-27f5-4e8d-9087-67bdcb126272)
 
 ![image](https://github.com/user-attachments/assets/06d45ca6-3aa9-4e6d-80aa-ed513f8a2df6)
 
