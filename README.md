@@ -3,14 +3,12 @@
 ## Project Overview
 This project demonstrates how to build and deploy a YouTube Clone application using Azure DevOps pipelines. It covers the process from setting up the infrastructure to deploy the application on Azure App Service.
 
----
 ## Prerequisites
 
 - **Azure DevOps Account:** Ensure you have an Azure DevOps organization set up.
 - **Azure Subscription:** Required for deploying the application to Azure App Service.
 - **IDE:** Use Visual Studio Code (VSCode) or any other preferred IDE.
 - **Git:** Ensure Git is installed and configured.
----
 
 ## Steps to Set Up the Infrastructure
 
@@ -18,24 +16,20 @@ This project demonstrates how to build and deploy a YouTube Clone application us
 Open a terminal in your IDE and run the following commands to download the application code:
 
 ---
-
 mkdir youtube_clone
 cd youtube_clone
 git init
 git clone https://github.com/piyushsachdeva/Youtube_Clone
-
 ---
 
 ### 2. Push Code to Azure DevOps
 Create a new project in Azure DevOps for this build pipeline and push the code using the following commands:
 
 ---
-
 git remote add origin <YOUR_AZURE_REPO_URL>
 git push -u origin all
 
 > **Note:** Replace `<YOUR_AZURE_REPO_URL>` with your Azure repository URL.
-
 ---
 
 ### 3. Create Azure App Service
@@ -43,7 +37,6 @@ git push -u origin all
 - Create an Azure App Service 
 
 <img width="916" alt="image" src="https://github.com/user-attachments/assets/1fe831a2-a90f-4289-b694-3894c55574be" />
-
 
 ### 4. Implement the Build Pipeline
 - Use the Azure DevOps pipeline the build pipeline.
@@ -54,7 +47,6 @@ git push -u origin all
 <img width="913" alt="image" src="https://github.com/user-attachments/assets/2d6d1005-e6f9-4969-b3db-cf6d251c18b7" />
   
 <img width="950" alt="image" src="https://github.com/user-attachments/assets/134453be-ac1b-4154-9722-f52367a1030b" />
-
 
 
 ### 5. Configure App Settings
@@ -77,7 +69,6 @@ Set the following app settings to disable all file caching:
 6. **Tasks:** Pre-packaged scripts for specific actions.
 7. **Artifacts:** Collections of files or packages published by a run.
 
----
 
 ## Pipeline Code
 
@@ -130,15 +121,12 @@ stages:
         RuntimeStack: 'STATICSITE|1.0'
 ```
 
----
-
 ## Key Learnings
 
 - **Service Connection & Service Principal:** Understanding how to securely connect Azure DevOps pipelines to Azure resources.
 - **Pipeline Stages and Jobs:** Managing build and deployment processes efficiently.
 - **Caching Management:** Properly disabling file caching to ensure reliable application behavior.
 
----
 
 ## Additional Resources
 
