@@ -168,21 +168,30 @@ stages:
 
 ![image](https://github.com/user-attachments/assets/d747e862-863e-4a17-8051-8c004e881ee3)
 
-![image](https://github.com/user-attachments/assets/4f28743a-27f5-4e8d-9087-67bdcb126272)
 
 ![image](https://github.com/user-attachments/assets/b2f4f643-309f-4aa0-86b0-41bdebe3ac9e)
 
-![image](https://github.com/user-attachments/assets/7d661cb3-e50d-44e4-9b83-e193eb83661d)
-
-![image](https://github.com/user-attachments/assets/acfeb9b7-6a5b-48c3-932d-5a8edebba24a)
-
-![image](https://github.com/user-attachments/assets/ba00cd97-4688-4aa7-a8c9-c282dc23f73d)
 
 ![image](https://github.com/user-attachments/assets/556151c6-90e8-4d79-93b6-57a0401cf435)
 
+
+![image](https://github.com/user-attachments/assets/4f28743a-27f5-4e8d-9087-67bdcb126272)
+
+
+![image](https://github.com/user-attachments/assets/acfeb9b7-6a5b-48c3-932d-5a8edebba24a)
+
+
+![image](https://github.com/user-attachments/assets/7d661cb3-e50d-44e4-9b83-e193eb83661d)
+
+
+![image](https://github.com/user-attachments/assets/ba00cd97-4688-4aa7-a8c9-c282dc23f73d)
+
+
 ![image](https://github.com/user-attachments/assets/41286c04-226a-411c-b6dd-c65dd956b59f)
 
+
 ![image](https://github.com/user-attachments/assets/3248cd9f-579f-4842-8f9e-7a976e91037e)
+
 
 ![image](https://github.com/user-attachments/assets/06d45ca6-3aa9-4e6d-80aa-ed513f8a2df6)
 
@@ -192,6 +201,7 @@ stages:
 
 
 ![image](https://github.com/user-attachments/assets/5f44b30d-8248-407a-9c78-85c5477558c5)
+
 
 ### 7. Application running successfully
 
